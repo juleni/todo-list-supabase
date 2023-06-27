@@ -4,8 +4,13 @@ export default function AddTask() {
   return (
     <form>
       <HStack my="4" h="45">
-        <Input h="100%" variant="filled" placeholder="Enter task..." />
-        <Button type="submit" colorScheme="blue" px="10" h="100%">
+        <Input
+          h="100%"
+          shadow="xl"
+          variant="filled"
+          placeholder="Enter task..."
+        />
+        <Button type="submit" shadow="xl" colorScheme="blue" px="10" h="100%">
           Add
         </Button>
       </HStack>
