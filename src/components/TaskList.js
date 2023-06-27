@@ -16,7 +16,21 @@ export default function TaskList() {
         alignItems="stretch"
       >
         <HStack key="">
-          <Text>To walk the dog</Text>
+          <Text w="100%" p="8px" borderRadius="lg">
+            To walk the dog
+          </Text>
+          <DeleteTask />
+        </HStack>
+        <HStack key="">
+          <Text w="100%" p="8px" borderRadius="lg">
+            To walk the dog
+          </Text>
+          <DeleteTask />
+        </HStack>
+        <HStack key="">
+          <Text w="100%" p="8px" borderRadius="lg">
+            To walk the dog
+          </Text>
           <DeleteTask />
         </HStack>
       </VStack>
