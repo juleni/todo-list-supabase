@@ -10,7 +10,7 @@ export default function AddTask() {
           variant="filled"
           placeholder="Enter task..."
         />
-        <Button type="submit" shadow="xl" colorScheme="blue" px="10" h="100%">
+        <Button type="submit" shadow="xl" colorScheme="pink" px="10" h="100%">
           Add
         </Button>
       </HStack>

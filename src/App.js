@@ -31,8 +31,8 @@ function App() {
             <Text
               w="100%"
               textAlign="right"
-              color="gray.500"
-              textShadow="1px 1px #F8F6F4"
+              color="pink.200"
+              textShadow="1px 1px #FEF2F4"
               fontSize={{
                 base: 'sm',
                 sm: 'sm',
@@ -46,12 +46,11 @@ function App() {
           </HStack>
           <VStack spacing={2}>
             <Heading
-              textShadow="3px 3px lightgray"
+              textShadow="3px 3px #FEF2F4"
               p="5"
               fontWeight="extrabold"
               size="xl"
-              bgGradient="linear(to-l), teal.300, blue.500"
-              color="blue.500"
+              color="pink.500"
             >
               TODO List SupaBASE
             </Heading>
@@ -62,8 +61,8 @@ function App() {
         <Text
           textAlign="center"
           w="100%"
-          color="gray.400"
-          textShadow="1px 1px #F8F6F4"
+          color="pink.100"
+          textShadow="1px 1px #FEF2F4"
           pl="5"
           pt="4"
           fontSize={{
