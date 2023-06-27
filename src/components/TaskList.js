@@ -1,4 +1,5 @@
 import { StackDivider, VStack } from '@chakra-ui/react';
+import ClearTasks from './ClearTasks';
 
 export default function TaskList() {
   return (
@@ -13,6 +14,7 @@ export default function TaskList() {
         maxW={{ base: '90vw', sm: '80vw', lg: '50vw', xl: '30vw' }}
         alignItems="stretch"
       ></VStack>
+      <ClearTasks />
     </>
   );
 }
