@@ -1,7 +1,18 @@
-import { StackDivider, VStack } from '@chakra-ui/react';
+import { Box, Image, StackDivider, VStack } from '@chakra-ui/react';
+//import { ReactComponent as Logo } from '../images/todolist.svg';
+import img from '../images/todolist.svg';
 import ClearTasks from './ClearTasks';
 
 export default function TaskList() {
+  return (
+    <Box align="center">
+      <Image
+        src={img}
+        maxW={{ base: '60%', sm: '60%', lg: '40%', xl: '20%' }}
+      />
+    </Box>
+  );
+
   return (
     <>
       <VStack
