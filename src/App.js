@@ -14,8 +14,8 @@ import TaskList from './components/TaskList';
 function App() {
   return (
     <ChakraProvider theme={theme}>
-      <Box textAlign="center" fontSize="xl">
-        <Grid minH="100vh" p={5}>
+      <Box fontSize="xl">
+        <Grid p={5}>
           <ColorModeSwitcher justifySelf="flex-end" />
           <VStack spacing={2} minH="100vh">
             <Heading
