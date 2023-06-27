@@ -4,6 +4,7 @@ import {
   Grid,
   Heading,
   HStack,
+  Link,
   Text,
   theme,
   VStack,
@@ -16,13 +17,22 @@ import TaskList from './components/TaskList';
 function App() {
   return (
     <ChakraProvider theme={theme}>
-      <Box fontSize="xl" borderWidth="4px" m="5" pb="10" borderRadius="lg">
+      <Box
+        fontSize="xl"
+        borderWidth="2px"
+        boxShadow="xl"
+        bor
+        m="5"
+        pb="5"
+        borderRadius="lg"
+      >
         <Grid p={5}>
           <HStack>
             <Text
               w="100%"
               textAlign="right"
               color="gray.500"
+              textShadow="10px 10px #F8F6F4"
               fontSize={{
                 base: 'sm',
                 sm: 'sm',
@@ -36,6 +46,7 @@ function App() {
           </HStack>
           <VStack spacing={2}>
             <Heading
+              textShadow="10px 10px lightgray"
               p="5"
               fontWeight="extrabold"
               size="xl"
@@ -49,17 +60,37 @@ function App() {
           </VStack>
         </Grid>
         <Text
+          textAlign="center"
           w="100%"
           color="gray.400"
+          textShadow="10px 10px #F8F6F4"
           pl="5"
+          pt="4"
           fontSize={{
-            base: 'sm',
+            base: 'xs',
             sm: 'sm',
             lg: 'lg',
             xl: 'xl',
           }}
         >
-          JULENI 2023 ... See my GitHub pages
+          <Link
+            fontWeight="bold"
+            target="_blank"
+            href="https://juleni.github.io/portfolio"
+            rel="noreferrer"
+          >
+            JULENI
+          </Link>{' '}
+          2023 ... See my{' '}
+          <Link
+            fontWeight="bold"
+            target="_blank"
+            href="https://github.com/juleni"
+            rel="noreferrer"
+          >
+            GitHub
+          </Link>{' '}
+          pages
         </Text>
       </Box>
     </ChakraProvider>
