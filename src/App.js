@@ -32,7 +32,7 @@ function App() {
               w="100%"
               textAlign="right"
               color="gray.500"
-              textShadow="10px 10px #F8F6F4"
+              textShadow="1px 1px #F8F6F4"
               fontSize={{
                 base: 'sm',
                 sm: 'sm',
@@ -46,7 +46,7 @@ function App() {
           </HStack>
           <VStack spacing={2}>
             <Heading
-              textShadow="10px 10px lightgray"
+              textShadow="3px 3px lightgray"
               p="5"
               fontWeight="extrabold"
               size="xl"
@@ -63,7 +63,7 @@ function App() {
           textAlign="center"
           w="100%"
           color="gray.400"
-          textShadow="10px 10px #F8F6F4"
+          textShadow="1px 1px #F8F6F4"
           pl="5"
           pt="4"
           fontSize={{
