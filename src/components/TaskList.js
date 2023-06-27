@@ -2,6 +2,7 @@ import {
   Box,
   HStack,
   Image,
+  Skeleton,
   StackDivider,
   Text,
   VStack,
@@ -14,15 +15,28 @@ import DeleteTask from './DeleteTask';
 
 export default function TaskList() {
   const [tasks, setTasks] = useState([]);
+  const [loading, setLoading] = useState(false);
 
   async function fetchData() {
+    setLoading(true);
     let { data: tasks, error } = await supabaseClient.from('todo').select('*');
     setTasks(tasks);
+    setLoading(false);
   }
 
   useEffect(() => {
     fetchData();
   }, []);
+
+  if (loading) {
+    return (
+      <Skeleton
+        width={{ base: '90vw', sm: '80vw', lg: '50vw', xl: '30vw' }}
+        height="300px"
+        rounded="md"
+      />
+    );
+  }
 
   if (!tasks.length) {
     return (
