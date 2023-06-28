@@ -27,7 +27,23 @@ export default function TaskList() {
     fetchData();
   }, []);
 
-  if (!loading && !tasks.length) {
+  if (loading) {
+    return (
+      <Box align="center" p="5">
+        <Text
+          p="3"
+          pl="6"
+          pr="6"
+          color="gray.500"
+          backgroundColor="gray.50"
+          borderRadius="lg"
+          shadow="xl"
+        >
+          Loading ...
+        </Text>{' '}
+      </Box>
+    );
+  } else if (!loading && !tasks.length) {
     return (
       <Box align="center">
         <Image
