@@ -76,7 +76,7 @@ export default function TaskList({ reloadList, setReloadList }) {
             </HStack>
           ))}
         </VStack>
-        <ClearTasks />
+        <ClearTasks setReloadList={setReloadList} />
       </>
     );
   }
