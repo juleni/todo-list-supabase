@@ -2,7 +2,6 @@ import {
   Box,
   HStack,
   Image,
-  Skeleton,
   StackDivider,
   Text,
   VStack,
@@ -28,17 +27,7 @@ export default function TaskList() {
     fetchData();
   }, []);
 
-  if (loading) {
-    return (
-      <Skeleton
-        width={{ base: '90vw', sm: '80vw', lg: '50vw', xl: '30vw' }}
-        height="300px"
-        rounded="md"
-      />
-    );
-  }
-
-  if (!tasks.length) {
+  if (!loading && !tasks.length) {
     return (
       <Box align="center">
         <Image
