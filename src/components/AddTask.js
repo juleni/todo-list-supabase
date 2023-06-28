@@ -47,6 +47,7 @@ export default function AddTask({ setReloadList }) {
           placeholder="Enter task..."
           value={text}
           onChange={e => setText(e.target.value)}
+          disabled={loading}
         />
         <Button
           type="submit"
@@ -56,7 +57,6 @@ export default function AddTask({ setReloadList }) {
           h="100%"
           isLoading={loading}
           loadingText="Adding"
-          disabled={true}
         >
           Add
         </Button>
