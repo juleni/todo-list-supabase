@@ -47,10 +47,7 @@ export default function TaskList({ reloadList, setReloadList }) {
   } else if (!loading && !tasks.length) {
     return (
       <Box align="center">
-        <Image
-          src={img}
-          maxW={{ base: '60%', sm: '60%', lg: '40%', xl: '20%' }}
-        />
+        <Image width="400px" src={img} />
       </Box>
     );
   } else {
