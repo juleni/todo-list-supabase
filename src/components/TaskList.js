@@ -47,7 +47,7 @@ export default function TaskList({ reloadList, setReloadList }) {
   } else if (!loading && !tasks.length) {
     return (
       <Box align="center">
-        <Image width="400px" src={img} />
+        <Image width="500px" src={img} />
       </Box>
     );
   } else {
