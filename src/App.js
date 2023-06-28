@@ -9,12 +9,13 @@ import {
   theme,
   VStack,
 } from '@chakra-ui/react';
-import React from 'react';
+import React, { useState } from 'react';
 import { ColorModeSwitcher } from './ColorModeSwitcher';
 import AddTask from './components/AddTask';
 import TaskList from './components/TaskList';
 
 function App() {
+  const [reloadList, setReloadList] = useState(false);
   return (
     <ChakraProvider theme={theme}>
       <Box
@@ -54,8 +55,8 @@ function App() {
             >
               TODO List SupaBASE
             </Heading>
-            <AddTask />
-            <TaskList />
+            <AddTask setReloadList={setReloadList} />
+            <TaskList reloadList={reloadList} setReloadList={setReloadList} />
           </VStack>
         </Grid>
         <Text

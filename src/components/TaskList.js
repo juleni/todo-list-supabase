@@ -12,7 +12,7 @@ import supabaseClient from '../supabaseClient';
 import ClearTasks from './ClearTasks';
 import DeleteTask from './DeleteTask';
 
-export default function TaskList() {
+export default function TaskList({ reloadList, setReloadList }) {
   const [tasks, setTasks] = useState([]);
   const [loading, setLoading] = useState(false);
 
@@ -25,7 +25,8 @@ export default function TaskList() {
 
   useEffect(() => {
     fetchData();
-  }, []);
+    setReloadList(false);
+  }, [reloadList]);
 
   if (loading) {
     return (
