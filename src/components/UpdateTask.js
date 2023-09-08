@@ -12,7 +12,7 @@ export default function UpdateTask({ id, isDone, setTasks }) {
     setIsDoneTask(!isDoneTask);
     let { data: tasks, error } = await supabaseClient
       .from('todo')
-      .update({ is_done: !isDone })
+      .update({ is_done: !isDoneTask })
       .eq('id', id);
     setTasks = { tasks };
     setLoading(false);
