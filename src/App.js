@@ -53,7 +53,7 @@ function App() {
               size="xl"
               color="pink.500"
             >
-              TODO List SupaBASE
+              TODO List SupaBASE 2
             </Heading>
             <AddTask setReloadList={setReloadList} />
             <TaskList reloadList={reloadList} setReloadList={setReloadList} />
