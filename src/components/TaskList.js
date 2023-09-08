@@ -23,6 +23,7 @@ import img from '../images/todolist.svg';
 import supabaseClient from '../supabaseClient';
 import ClearTasks from './ClearTasks';
 import DeleteTask from './DeleteTask';
+import UpdateTask from './UpdateTask';
 
 export default function TaskList({ reloadList, setReloadList }) {
   const [tasks, setTasks] = useState([]);
@@ -186,6 +187,11 @@ export default function TaskList({ reloadList, setReloadList }) {
                 setTasks={setTasks}
                 handleDeleteTask={handleDeleteTask}
                 setDeleteItem={setDeleteItem}
+              />
+              <UpdateTask
+                id={task.id}
+                isDone={task.is_done}
+                setTasks={setTasks}
               />
             </HStack>
           ))}
